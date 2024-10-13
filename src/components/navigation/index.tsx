@@ -1,7 +1,7 @@
 import React from "react";
 import { navigation } from "@/constants/navigation";
 
-const NavBar = () => {
+const Navigation = () => {
   return (
     <nav>
       <ul className="flex items-center gap-4">
@@ -15,4 +15,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navigation;

@@ -1,12 +1,12 @@
 import React from "react";
-import NavBar from "@/components/nav-bar";
-import ThemSwitcher from "@/components/them-switcher";
+import Navigation from "../navigation";
+import ThemeSwitcher from "../theme-switcher";
 
 const Header = () => {
   return (
     <header>
-      <NavBar />
-      <ThemSwitcher />
+      <Navigation />
+      <ThemeSwitcher />
     </header>
   );
 };

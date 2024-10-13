@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { AiOutlineSun } from "react-icons/ai";
 import { AiOutlineMoon } from "react-icons/ai";
+import { useOpen } from "@/hooks/use-open";
 
-const ThemSwitcher = () => {
-  const [darkMode, setDarkMode] = useState(false);
+const ThemeSwitcher = () => {
+  const { isOpen: darkMode, setIsOpen: setDarkMode } = useOpen();
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -25,12 +26,12 @@ const ThemSwitcher = () => {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 transition-colors duration-200 absolute right-10 top-10"
+      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 transition-colors duration-200 absolute right-8 top-5"
       aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
-      {darkMode ? <AiOutlineSun size={24} /> : <AiOutlineMoon size={24} />}
+      {darkMode ? <AiOutlineSun size={20} /> : <AiOutlineMoon size={20} />}
     </button>
   );
 };
 
-export default ThemSwitcher;
+export default ThemeSwitcher;
