@@ -8,11 +8,16 @@ export const navigation = [
     path: "/#experience",
   },
   {
+    name: "View full CV",
+    path: "/#download-cv",
+  },
+  {
     name: "Hire me",
     path: "/#hire-me",
   },
-  {
-    name: "Download CV",
-    path: "/#download-cv",
-  },
 ];
+
+export enum SECTIONS {
+  ABOUT = "about",
+  EXPERIENCE = "experience",
+}

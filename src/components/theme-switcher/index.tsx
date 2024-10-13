@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { AiOutlineSun } from "react-icons/ai";
 import { AiOutlineMoon } from "react-icons/ai";
 import { useOpen } from "@/hooks/use-open";
@@ -11,7 +11,7 @@ const ThemeSwitcher = () => {
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") setDarkMode(true);
-  }, []);
+  }, [setDarkMode]);
 
   useEffect(() => {
     if (darkMode) {
